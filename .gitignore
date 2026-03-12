@@ -1,0 +1,25 @@
+# === ENVIRONMENT & SECRETS ===
+.env
+.env.local
+.env.*.local
+*.pem
+
+# === DEPENDENCIES ===
+node_modules/
+__pycache__/
+*.pyc
+
+# === BUILD OUTPUT ===
+dist/
+build/
+.next/
+
+# === OS FILES ===
+.DS_Store
+Thumbs.db
+
+# === EDITOR ===
+.vscode/
+.idea/
+*.swp
+*.swo
