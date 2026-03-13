@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Git & GitHub — PressmenX</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      color: #f0f6fc;
+    }
+
+    .badge {
+      background: #238636;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #f0f6fc;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: #8b949e;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #238636;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 12px;
+      transition: background 0.2s;
+    }
+
+    .btn:hover { background: #2ea043; }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+    }
+
+    .btn-outline:hover { background: #161b22; }
+
+    .phases {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .phase-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .phase-card:hover { border-color: #58a6ff; }
+
+    .phase-card .icon { font-size: 1.8rem; margin-bottom: 10px; }
+
+    .phase-card h3 {
+      color: #f0f6fc;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .phase-card p {
+      color: #8b949e;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .done { border-left: 3px solid #238636; }
+    .progress { border-left: 3px solid #d29922; }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #8b949e;
+      font-size: 0.85rem;
+      border-top: 1px solid #30363d;
+      margin-top: 80px;
+    }
+
+    footer a { color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span>🎓</span>
+    <h1>Belajar Git & GitHub</h1>
+    <span class="badge">In Progress</span>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h2>Dari Nol ke<br>Professional Developer</h2>
+      <p>
+        Dokumentasi perjalanan belajar Git & GitHub secara mendalam —
+        version control, branching strategy, kolaborasi tim, hingga
+        GitHub Actions dan open source contribution.
+      </p>
+      <a href="https://github.com/PressmenX/belajar-git" class="btn">
+        ⭐ Lihat Repository
+      </a>
+      <a href="https://github.com/PressmenX" class="btn btn-outline">
+        👤 GitHub Profile
+      </a>
+    </div>
+
+    <div class="phases">
+      <div class="phase-card done">
+        <div class="icon">🟢</div>
+        <h3>FASE 1 — Fondasi</h3>
+        <p>Init, add, commit, log, diff, restore, reset</p>
+      </div>
+      <div class="phase-card done">
+        <div class="icon">🟡</div>
+        <h3>FASE 2 — Branching</h3>
+        <p>Switch, merge, stash, conflict resolution</p>
+      </div>
+      <div class="phase-card done">
+        <div class="icon">🟠</div>
+        <h3>FASE 3 — Collaboration</h3>
+        <p>SSH, remote, clone, fork, PR workflow</p>
+      </div>
+      <div class="phase-card done">
+        <div class="icon">🔴</div>
+        <h3>FASE 4 — Professional</h3>
+        <p>.gitignore, conventional commits, README, revert</p>
+      </div>
+      <div class="phase-card progress">
+        <div class="icon">🔵</div>
+        <h3>FASE 5 — Ecosystem</h3>
+        <p>GitHub Pages, Actions, Issues, CI/CD</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Dibuat dengan ❤️ oleh <a href="https://github.com/PressmenX">PressmenX</a>
+    · Hosted on <a href="https://pages.github.com">GitHub Pages</a>
+  </footer>
+
+</body>
+</html>
