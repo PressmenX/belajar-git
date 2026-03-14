@@ -1,0 +1,55 @@
+name: CI — Cek Kualitas Kode
+
+# Kapan workflow ini dijalankan
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality-check:
+    name: Cek Kualitas
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Ambil kode dari repo
+      - name: Checkout kode
+        uses: actions/checkout@v4
+
+      # Step 2: Cek semua file Markdown ada
+      - name: Verifikasi file penting
+        run: |
+          echo "=== Mengecek file penting ==="
+          test -f README.md && echo "✅ README.md ada" || echo "❌ README.md hilang!"
+          test -f .gitignore && echo "✅ .gitignore ada" || echo "❌ .gitignore hilang!"
+          test -f profil.md && echo "✅ profil.md ada" || echo "❌ profil.md hilang!"
+          test -f index.html && echo "✅ index.html ada" || echo "❌ index.html hilang!"
+
+      # Step 3: Cek .env tidak ter-commit
+      - name: Security check — pastikan .env tidak ter-commit
+        run: |
+          echo "=== Security Check ==="
+          if [ -f .env ]; then
+            echo "❌ BAHAYA: .env ter-commit!"
+            exit 1
+          else
+            echo "✅ Aman: .env tidak ditemukan"
+          fi
+
+      # Step 4: Cek ukuran repo
+      - name: Cek ukuran repo
+        run: |
+          echo "=== Ukuran Repository ==="
+          du -sh .
+          echo "✅ Pengecekan selesai"
+
+      # Step 5: Tampilkan summary
+      - name: Summary
+        run: |
+          echo "================================"
+          echo "✅ Semua pengecekan berhasil!"
+          echo "Repo: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "================================"
