@@ -15,7 +15,7 @@ jobs:
     steps:
       # Step 1: Ambil kode dari repo
       - name: Checkout kode
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # Step 2: Cek semua file Markdown ada
       - name: Verifikasi file penting
