@@ -1,0 +1,30 @@
+version: 2
+
+updates:
+  # Pantau GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"        # cek setiap minggu
+      day: "monday"
+      time: "09:00"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "ci"              # conventional commit otomatis!
+
+  # Pantau npm dependencies (untuk project Node.js nanti)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    labels:
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "chore"
+    # Batasi maksimal PR yang dibuat sekaligus
+    open-pull-requests-limit: 5
