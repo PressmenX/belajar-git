@@ -1,0 +1,14 @@
+{
+  "name": "belajar-git",
+  "version": "1.0.0",
+  "description": "Repo latihan Git & GitHub",
+  "scripts": {
+    "test": "echo 'No tests yet'"
+  },
+  "dependencies": {
+    "lodash": "4.17.20"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
